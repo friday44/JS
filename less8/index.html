@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        for (let i = 0; i <= 10; i++) {
+            if (i === 0) {
+                console.log('0 - это ноль');
+            } else if (i % 2 !== 0) {
+                console.log(`${i} - это нечетное число`);
+            }
+            else if (i % 2 === 0) {
+                console.log(`${i} - это четное число`);
+            }
+        }
+
+        //         Задание 2
+        const arr = [1, 2, 3, 4, 5, 6, 7];
+        arr.splice(3, 2);
+        console.log(arr);
+
+
+        //         Задание 3
+        const arr2 = [];
+        for (let i = 0; i < 5; i++) {
+            arr2.push(Math.floor(Math.random() * 11));
+        }
+        console.log(`массив: ${arr2}`);
+        let sum = 0;
+        let min = 10;
+        let flag = false;
+        for (let i = 0; i < arr2.length; i++) {
+            sum += arr2[i];
+            if (arr2[i] <= min) {
+                min = arr2[i];
+            }
+            if (arr2[i] === 3) {
+                flag = true;
+            }
+        }
+        console.log(`сумма элементов: ${sum}`);
+        console.log(`минимальное значение: ${min}`);
+        console.log((flag === true) ? 'число 3 найдено' : 'число 3 не найдено');
+
+        // Необязательное задание.
+        let text = '';
+        for (let i = 0; i < 20; i++) {
+            text += 'x';
+            console.log(text);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

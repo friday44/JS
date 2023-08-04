@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Задание 1
+        // const arr = [1, 2, 3];
+        // for (let i = 0; i < arr.length; i++) {
+        //     const element = arr[i];
+        //     console.log(element);
+        // }
+
+        // const arr2 = [11, 12, 13, 14, 15, 16, 17];
+        // console.log(arr2.length);
+
+        // const arr3 = ['a', 'b', 'c']
+        // console.log(arr3);
+        // arr3[0] = 1;
+        // arr3[1] = 2;
+        // arr3[2] = 3;
+        // console.log(arr3);
+
+        //Задание 2
+        // const arr4 = [1, 2, 3];
+        // console.log(arr4);
+        // for (let i = 0; i < arr4.length; i++) {
+        //     arr4[1]++;
+        // }
+        // console.log(arr4);
+
+        // const arr5 = [];
+        // arr5[3] = 'a';
+        // arr5[8] = 'b';
+        // console.log(arr5.length);
+        // console.log(arr5);
+
+        // const arr6 = [1, 2, 3];
+        // arr6.push(4, 5);
+        // arr6.push('up');
+        // console.log(arr6);
+
+        // const arr7 = [13, 14, 15, 16, 17];
+        // arr7.pop();
+        // arr7.pop();
+        // console.log(arr7);
+        // console.log(`Длина массива: ${arr7.length}`);
+
+        //Задание 3
+        // for (let i = 11; i <= 33; i++) {
+        //     console.log(i);
+        // }
+
+        // for (let i = 2; i < 100; i+=2) {
+        //     console.log(i);
+        // }
+
+        // for (let i = 20; i >= 0; console.log(i--)) {
+        // }
+
+        // let num = 3;
+        // let count = 0;
+        // while (num <= 1000) {
+        //     num *= 3;
+        //     count++;
+        // }
+        // console.log(count);
+
+        //Задание 4
+        // const arr8 = [2, 5, 9, 15, 1, 4];
+        // for (let i = 0; i < arr8.length; i++) {
+        //     if (arr8[i] > 3 && arr8[1] < 10) {
+        //         console.log(arr8[i]);
+        //     }
+        // }
+
+        // let sum = 0;
+        // for (let i = 2; i <= 100; i++) {
+        //     if (i % 2 === 0) {
+        //         sum += i;
+        //     } else {
+        //         continue
+        //     }
+        // }
+        // console.log(sum);
+
+        // const arr9 = [2, 5, 9, 3, 1, 4];
+        // let sumArr = 0;
+        // for (let i = 0; i < arr9.length; i++) {
+        //     sumArr += arr9[i];
+        // }
+        // console.log(sumArr);
+
+        // let text = '-';
+        // for (let i = 1; i <= 9; i++) {
+        //     text += i + '-';
+        // }
+        // console.log(text);
+
+        // const arr10 = [2, 5, 9, 0, 3, 1, 4];
+        // let index = 0;
+        // while (arr10[index] !== 0) {
+        //     console.log(arr10[index]);
+        //     index++;
+        // }
+
+        //Задание 5
+        const arr11 = [2, 5, 9, 0, 3, 1, 4, 5, 8, 3];
+        for (let i = 0; i < arr11.length; i++) {
+            if (arr11[i] % 2 === 0) {
+                console.log(arr11[i] ** 2);
+            }
+            else if (arr11[i] % 3 === 0) {
+                console.log(arr11[i] ** 3);
+            }
+            else {
+                continue;
+            }
+        }
+
+
+        const arr12 = [];
+        for (let i = 0; i <= 3; i += 3) {
+            const arr13 = [];
+            for (let j = 1; j <= 3; j++) {
+                arr13.push(j + i);
+            }
+            arr12.push(arr13);
+        }
+        console.log(arr12);
+
+        const arr14 = [1, 2, 3, 2, 4, 3, 5, 6, 3, 2, 3];
+        let coun = 0;
+        for (let i = 0; i < arr14.length; i++) {
+            if (arr14[i] === 3) {
+                coun++;
+            }
+        }
+        console.log(coun);
+
+        const arr15 = [1, 2, 3, 4, 5];
+        arr15.splice(1, 2);
+        console.log(arr15);
+
+    </script>
+</body>
+
+</html>

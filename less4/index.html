@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>less4</title>
+</head>
+
+<body>
+    <script>
+        //Задание 1
+        let num1 = Number(prompt("Введите первое число"));
+        let num2 = Number(prompt('Введите второе число'));
+        if (num1 <= 1 && num2 >= 3) {
+            alert('Первое число меньше или равно 1, второе число больше или равно 3')
+        }
+        else {
+            alert('Условия не выполнены')
+        }
+
+        //Задание 2
+        let test = true;
+        console.log((test === true) ? ('+++') : ('---'));
+
+
+        //Задание 3
+
+        let day = Number(prompt('Введите число'));
+
+        if (day > 0 && day <= 10) {
+            alert('Первая декада')
+        }
+        else if (day > 10 && day <= 20) {
+            alert('Вторая декада')
+        }
+        else if (day > 20 && day <= 31) {
+            alert('Третья декада')
+        }
+
+        //Задание 4
+        let num = Number(prompt('Введите число'));
+        alert(`В числе ${num} сотен: ${Math.floor(num / 100) % 10}, десятков: ${Math.floor(num / 10) % 10} единиц: ${num % 10}`)
+
+
+
+    </script>
+</body>
+
+</html>

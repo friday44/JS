@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Задание 1
+        const cubeOfNumber = (number) => (number ** 3);
+        console.log(cubeOfNumber(2) + cubeOfNumber(3));
+
+
+        //Задание 2
+        let salary = Number(prompt('Введите сумму зарплаты'));
+
+        alert(typeof salary === 'number' &&
+            !isNaN(salary) ? `Размер заработной платы за вычетом налогов равен ${0.87 * salary}` : `Вы ввели некорректное значение`)
+
+
+        //Задание 3
+        let a = Number(prompt('Введите первое число'));
+        let b = Number(prompt('Введите второе число'));
+        let c = Number(prompt('Введите третье число'));
+
+        function findMax(a, b, c) {
+            if (a === Math.max(a, b, c)) {
+                alert(`Наибольшее из трех чисел - это число a = ${a}`)
+            } else if (b === Math.max(a, b, c)) {
+                alert(`Наибольшее из трех чисел - это число b = ${b}`)
+            } else if (c === Math.max(a, b, c)) {
+                alert(`Наибольшее из трех чисел - это число c = ${c}`)
+            }
+        }
+        findMax(a, b, c);
+
+
+        //Задание 4
+        const sum = (n1, n2) => n1 + n2;
+        const diff = (n1, n2) => (n1 > n2) ? n1 - n2 : n2 - n1;
+        const prod = (n1, n2) => n1 * n2;
+        const quot = (n1, n2) => n1 / n2;
+
+        console.log(sum(2, 6));
+        console.log(diff(2, 6));
+        console.log(prod(2, 6));
+        console.log(quot(2, 6));
+
+
+
+
+    </script>
+</body>
+
+</html>
