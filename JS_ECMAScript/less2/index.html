@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="class1" id="root">
+        <div class="class2">
+            <div class="class3">
+                <div class="class4">
+                    <div class="class5">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Дан массив const arr = [1, 5, 7, 9] с помощью Math.min и spread оператора, найти минимальное число в массиве, решение задание должно состоять из одной строки
+        const arr = [3, 5, 7, 9, 2]
+        console.log(Math.min(...arr));
+
+        // Напишите функцию createCounter, которая создает счетчик и возвращает объект с двумя методами: increment и decrement. Метод increment должен увеличивать значение счетчика на 1, а метод decrement должен уменьшать значение счетчика на 1. Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
+        const createCounter = () => {
+            let counter = 0;
+            return {
+                increment: () => { ++counter },
+                decrement: () => { --counter },
+                result: () => counter
+            }
+        }
+        const counter = createCounter();
+
+        counter.increment();
+        console.log(counter.result());
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        console.log(counter.result());
+
+        counter.decrement();
+        console.log(counter.result());
+
+        //Напишите рекурсивную функцию findElementByClass, которая принимает корневой элемент дерева DOM и название класса в качестве аргументов и возвращает первый найденный элемент с указанным классом в этом дереве.
+        // Пример
+        // const rootElement = document.getElementById('root');
+        // const targetElement = findElementByClass(rootElement, 'my-class');
+        // console.log(targetElement);
+
+        // function findElementByClass(rootEl, classEl) {
+        //     for (let index = 0; index < rootEl.children.length; index++) {
+        //         rootEl = rootEl.children[index];
+        //         if (rootEl.className === classEl) {
+        //             return rootEl;
+        //         }
+        //         findElementByClass(rootEl, classEl);
+        //     }
+        // }
+
+        function findElementByClass(rootEl, classEl) {
+            let currentEl = rootEl.childNode;
+            console.log(currentEl);
+            if (currentEl.className === classEl) {
+                return currentEl;
+            }
+            return findElementByClass(currentEl.childNode, classEl);
+        }
+
+
+        const rootElement = document.getElementById('root');
+        const targetElement = findElementByClass(rootElement, 'class1');
+        console.log(targetElement);
+
+
+    </script>
+</body>
+
+</html>

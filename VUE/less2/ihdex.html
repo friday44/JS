@@ -56,7 +56,8 @@
                 this.itemsList.push({ id: 5, text: 'Элемент 5' })
             },
             deleteItem(item) {  // задача 3
-                this.itemsList.splice(this.item, 1);
+                this.itemsList.splice(this.itemsList.indexOf(item), 1);
+
             }
         }
     })

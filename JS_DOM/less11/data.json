@@ -1,0 +1,34 @@
+[
+    {
+        "name": "MANGO PEOPLE T-SHIRT",
+        "image": "img/ph1.jpg",
+        "price": "300",
+        "color": "red",
+        "size": "XL",
+        "quantity": "2"
+    },
+    {
+        "name": "MANGO PEOPLE T-SHIRT",
+        "image": "img/ph2.jpg",
+        "price": "300",
+        "color": "red",
+        "size": "XL",
+        "quantity": "2"
+    },
+    {
+        "name": "MANGO PEOPLE T-SHIRT",
+        "image": "img/ph1.jpg",
+        "price": "300",
+        "color": "red",
+        "size": "XL",
+        "quantity": "2"
+    },
+    {
+        "name": "MANGO PEOPLE T-SHIRT",
+        "image": "img/ph2.jpg",
+        "price": "300",
+        "color": "red",
+        "size": "XL",
+        "quantity": "2"
+    }
+]

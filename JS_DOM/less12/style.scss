@@ -1,0 +1,143 @@
+@import 'vars';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+
+}
+
+.center {
+    padding-left: calc(50% - $widthSite / 2);
+    padding-right: calc(50% - $widthSite / 2);
+}
+
+.products {
+    margin-bottom: 48px;
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        color: $colorBack;
+        text-align: center;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+        text-align: center;
+    }
+
+}
+
+.product-box {
+    padding: 48px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.product {
+    background: #F8F8F8;
+    position: relative;
+    max-width: 360px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px 16px;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D5D5D;
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $colorSelect;
+    }
+
+    &:hover .product__img {
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5);
+    }
+
+    &:hover .product__img {
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5);
+    }
+
+    &:hover .product-add__link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.product-add__link {
+    position: absolute;
+    top: 188px;
+    left: 111px;
+    border: 1px solid #fff;
+    width: 139px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    color: #FFFFFF;
+
+    &:hover {
+        -webkit-box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    &:hover svg path {
+        fill: $colorSelect;
+    }
+}
