@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <!-- Вы разрабатываете страницу для отображения информации о товаре. У вас есть объект product, который содержит информацию о товаре, включая название, цену и URL изображения товара. Вам необходимо отобразить эту информацию на странице с использованием v-bind. 
+            Добавьте кнопку, которая будет изменять цену товара. При нажатии на кнопку должна генерироваться скидка на товар от 1 до 20% и обновиться цена товара в соответствии с значением скидки-->
+            <h2>{{ product.name }}</h2>
+            <p>{{ discountPrice }}</p>
+            <img :src="product.imgLink" alt="picture"><br>
+            <button @click="discountGenerator">Calculate price with discount</button>
+        </div>
+        <div>
+            <!-- Вы разрабатываете простое приложение для отображения списка пользователей. У вас есть массив объектов users, где каждый объект представляет одного пользователя с его именем и возрастом. Вам необходимо отобразить каждого пользователя из массива в виде списка на странице. -->
+            <ul>
+                <li v-for="{id, name, age} in users" :key="id">{{ id }} {{ name }} {{ age }}</li>
+            </ul>
+        </div>
+        <div>
+            <!-- Вы разрабатываете приложение для создания списка покупок. У вас есть массив объектов items, где каждый объект представляет товар с его названием и количеством. Вам необходимо отобразить список товаров, предоставить возможность изменять количество каждого товара и отмечать товары, которые уже куплены. -->
+            <!-- После добавления нового элемента он должен отображаться в списке. Требуется связать форму с данными. -->
+            <input type="number" name="Сколько купить" v-model.number="newItem.quantity">
+            <input type="text" name="Что купить" v-model="newItem.name">
+            <button @click="addItem">Добавить покупку в список</button>
+            <div class="items" v-for="item in items" :key="item.id">
+                <input type="checkbox" name="Куплено" v-model="item.isBuy">
+                <input type="number" name="Ввести количество" v-model.number="item.quantity">
+                <span>{{ item.name }}</span>
+            </div>
+        </div>
+        <div>
+            <!-- Вы разрабатываете приложение для управления списком контактов. У вас есть форма с полями "Имя", "Фамилия" и "Email", где пользователь может вводить информацию о новом контакте. После добавления контакта он должен отображаться в списке контактов. Требуется связать форму с данными и отображать список контактов на странице. -->
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                product: {
+                    name: 'Flower',
+                    price: 100,
+                    imgLink: 'https://f.vividscreen.info/soft/8e03d3de0c1875785119b2428d2c6767/Pink-Petals-320x240.jpg'
+                },
+                discount: 0,
+                users: [
+                    {
+                        id: 1,
+                        name: 'Ivan',
+                        age: 33
+                    },
+                    {
+                        id: 2,
+                        name: 'Petr',
+                        age: 28
+                    },
+                    {
+                        id: 3,
+                        name: 'Basil',
+                        age: 25
+                    },
+                ],
+                items: [
+                    {
+                        id: 1,
+                        name: 'хлеб',
+                        quantity: 3,
+                        isBuy: false,
+                    },
+                    {
+                        id: 2,
+                        name: 'молоко',
+                        quantity: 2,
+                        isBuy: false,
+                    },
+                    {
+                        id: 3,
+                        name: 'сыр',
+                        quantity: 2,
+                        isBuy: false,
+                    },
+                    {
+                        id: 4,
+                        name: 'сок',
+                        quantity: 4,
+                        isBuy: false,
+                    },
+                ],
+                newItem:
+                {
+                    id: 0,
+                    name: '',
+                    quantity: 0,
+                    isBuy: false,
+                },
+            },
+            methods: {
+                discountGenerator() {
+                    this.discount = Math.floor(Math.random() * 20)
+                },
+                addItem() {
+                    this.newItem.id = Date.now();
+                    this.items.push(
+                        this.newItem = { ...this.newItem }
+                    )
+                    this.newItem =
+                    {
+                        id: 0,
+                        name: '',
+                        quantity: 0,
+                        isBuy: false,
+                    }
+                }
+            },
+            computed: {
+                discountPrice() {
+                    return this.product.price - (this.product.price * this.discount / 100);
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>
